@@ -166,4 +166,21 @@ const testCondition = "abc" === "bca";
 const sortNumbers = numbers.sort((a, b) => a - b); // ascending
 // const sortNumbers = numbers.sort((a, b) => b - a); // descending
 
-console.log("Sorted numbers", sortNumbers);
+// console.log("Sorted numbers", sortNumbers);
+
+// [33, 3, 13, 7, 17, 9, 2];
+
+function calculate(accumulator, current) {
+  return accumulator + current;
+  // 10 + 33
+  // 33 + 3
+  // 36 + 13
+} // 0101 adresa -> calculate
+
+const sum = numbers.reduce(calculate, 10);
+console.log("sum", sum);
+
+// Function reference
+const myFun = calculate;
+// Function call
+myFun();
