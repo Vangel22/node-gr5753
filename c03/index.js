@@ -60,7 +60,7 @@ function callbackHell() {
 // writeFile().then().catch().finally();
 // Step 3
 
-// function promiseCallbacks(resolve, reject) {}
+// function promiseCallbacks(uspeh, neuspeh) {}
 
 // const writeFile = () => {
 //   return new Promise((resolve, reject) => {});
@@ -83,21 +83,37 @@ function callbackHell() {
 
 // Step 5
 
-const writeFile = () => {
-  return new Promise((resolve, reject) => {
-    fs.writeFile("data.txt", "Semos education!", (err) => {
-      if (err) reject(err);
-      resolve("Success");
-    });
-  });
-};
+// const writeFile = () => {
+//   return new Promise((resolve, reject) => {
+//     fs.writeFile("data.txt", "Semos education!", (err) => {
+//       if (err) reject(err);
+//       resolve("Success");
+//     });
+//   });
+// };
 
-writeFile()
-  .then((res) => console.log(res))
-  .catch((err) => console.log(err))
-  .finally(() => console.log("Writing operation finished..."));
+// writeFile()
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err))
+//   .finally(() => console.log("Writing operation finished..."));
 
 // student.txt
 // writeFile da ja premestite vo read-write.js
 // writeFile treba da ima dva parametri writeFile(fileName, data)
 // Zapisete go vaseto ime i prezime vo student.txt
+
+// Async/await - syntactic sugar upon Promises
+// try,catch,finally is swapped for .then().catch().finally()
+
+const main = async () => {
+  try {
+    const read = await readFile("data.txt");
+    console.log(read);
+  } catch (err) {
+    console.log(err);
+  } finally {
+    console.log("Async finished!");
+  }
+};
+
+main();
