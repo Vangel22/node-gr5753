@@ -2,7 +2,7 @@ const fs = require("fs");
 
 const { readFile } = require("./read-write");
 
-// Callback
+// Callback - a function that takes another function as a parameter
 // Analogija - vadenje na karticka vo banka
 
 // Example 1
@@ -33,6 +33,8 @@ function printResultCallback(result, cb) {
   console.log("Result: ", result);
   cb(); // calling a function
 }
+
+// funOne(funTwo(funThree)) -> callback hell
 
 function callbackHell() {
   // Funckija 3
