@@ -18,6 +18,15 @@ const handler = (req, res) => {
 
   let result = 0;
 
+  const regularenIzraz = new RegExp("/^[A-Za-z]+$/g");
+  let moetoIme = "Vangel";
+  //   let moetoIme = "" // NOT OK
+  if (regularenIzraz.test(moetoIme)) {
+    console.log("OK");
+  } else {
+    console.log("NOT OK");
+  }
+
   // Zadaca: implementirajte mnozenje i delenje
   // Isprobajte go ova preku localhost url
 
