@@ -6,6 +6,8 @@ const handler = require("./handler/handler");
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
 
+  // Napravete handler koj ke go ispise vaseto ime koga ke dopreme do /student
+
   if (parsedUrl.pathname === "/welcome") {
     handler.handleWelcome(req, res);
   } else if() {
