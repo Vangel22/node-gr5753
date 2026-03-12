@@ -1,0 +1,24 @@
+A - Regular expression and query string
+
+Query string - posle ? vo url
+
+1. parsedUrl.query.ime 
+2. parsedUrl.query.prezime
+3. parsedUrl.query.embg
+
+handlePerson(req,res, query) {
+    query.ime -> Pocnuva so golema bukva regex
+    query.prezime -> Pocnuva so golema bukva regex
+    query.embg -> Se sostoi samo od brojki i ima tocno 17 brojki (proverete)
+}
+
+handlePerson treba da ja iskoristite vo app.js
+
+B - Create and Read functions with different data
+
+Namesto data.json so studenti, dodadete knigi vo json-ot.
+Iskoristite gi istite funkcii koi veke postojat vo c07/v1 i prikazete dodavanje i citanje na knigite od data.json
+
+*Bonus - razgledajte go ubavo read-write.js
+JSON.parse mora da znaeme kako raboti
+JSON.strignify mora da znaeme kako raboti
