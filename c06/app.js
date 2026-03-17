@@ -15,6 +15,13 @@ const server = http.createServer((req, res) => {
     handler.handleWelcome(req, res);
   } else if (parsedUrl.pathname === "/user") {
     handler.handleUser(req, res, parsedUrl.query.username);
+  } else if (parsedUrl.pathname === "/person") {
+    handler.handlePerson(
+      req,
+      res,
+      parsedUrl.query.firstname,
+      parsedUrl.query.lastname,
+    );
   } else {
     handler.handleNotFound(req, res);
   }

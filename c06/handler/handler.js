@@ -21,8 +21,14 @@ const handleNotFound = (req, res) => {
   res.end("Not found");
 };
 
+const handlePerson = (req, res, firstname, lastname) => {
+  res.writeHead(200, { "content-type": "text/plain" }); // 200 - OK
+  res.end(`Hello ${firstname} ${lastname}`);
+};
+
 module.exports = {
   handleWelcome,
   handleUser,
   handleNotFound,
+  handlePerson,
 };
