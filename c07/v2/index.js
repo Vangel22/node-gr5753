@@ -5,6 +5,7 @@ const {
   addStudent,
   editStudent,
   deleteStudent,
+  getSingleStudent,
 } = require("./handler/students");
 
 const app = express();
@@ -25,7 +26,8 @@ app.use(express.json()); // ke ni ovozmozi req.body da bide od tip JSON
 // ]
 
 // if(url.pathname === "/students" && req.method === "GET"){}
-app.get("/students", getAllStudents);
+app.get("/students", getAllStudents); // localhost:3000/students preku url
+app.get("/student/:studentId", getSingleStudent);
 app.post("/students", addStudent);
 app.delete("/students/:studentIndex", deleteStudent);
 app.put("/students/:studentIndex", editStudent);

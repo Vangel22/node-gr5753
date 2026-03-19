@@ -9,6 +9,17 @@ const getAllStudents = async (req, res) => {
   return res.status(200).send(students);
 };
 
+const getSingleStudent = async (req, res) => {
+  const students = await read();
+  // map, filter, sort, reduce, every, some
+
+  const foundStudent = students.find(
+    (student, index) => index === Number(req.params.studentId),
+  );
+
+  res.status(200).send(foundStudent);
+};
+
 const addStudent = async (req, res) => {
   // req.body
   const students = await read();
@@ -57,6 +68,7 @@ const editStudent = async (req, res) => {
 
 module.exports = {
   getAllStudents,
+  getSingleStudent,
   addStudent,
   deleteStudent,
   editStudent,
