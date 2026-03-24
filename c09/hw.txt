@@ -1,0 +1,39 @@
+get /analiza - calculator-form.html za referenca, треба да биде analiza-form.html
+
+треба да се појавува формулар во кој ќе има textarea во која ќе се венсува текст. 
+при правење на submit на формуларот, податоците ќе се испраќаат на 
+
+post /analiza - calculator.html za referenca, треба да биде analiza.htmnl
+
+каде, текстот внесен во textarea-та ќе биде анализиран по следниве точки
+ - вкупен број на карактери
+ - вкупен број на зборови помали од 5 карактери
+ - вкупен број на зборови поголеми од 5 карактери
+ - вкупен број на зборови еднакви на 5 карактери
+ - број на реченици
+ - број на зборови
+ - број на зборови кои почнуваат на една од следниве букви: а, о, у, и, е
+
+
+Пример:
+<input
+    type="number"
+    name="numberOne" -> ni se naogja vo req.body.numberOne
+    placeholder="Prva brojka"
+    required
+/>
+
+Пример:
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>Број на карактери <i>{{brojNaKarakteri}}</i></h1>
+    <h1>Помали од пет <i>{{pomaliOdPet}}</i></h1>
+    <h1>Поголеми од пет <i>{{pogolemiOdPet}}</i></h1>
+  </body>
+</html>
