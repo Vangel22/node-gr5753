@@ -1,0 +1,4 @@
+Napravete:
+
+1. mnozenje - dodadete ja operacijata vo select vo calculator-form, isto taka vo postCalculator dodadete ja vo switch
+2. delenje - dodadete ja operacijata vo select vo calculator-form, isto taka vo postCalculator dodadete ja vo switch
