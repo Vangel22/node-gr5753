@@ -6,6 +6,9 @@
     <title>Data</title>
   </head>
   <body>
+
+    <%- include("partials/header", { firstname: ime, lastname: prezime }) %>
+
     <h3>Цело име: <%= ime %> <%= prezime %></h3>
 
     <% niza.forEach(grad => { %>
@@ -45,7 +48,13 @@
                         <% } %>
                     </ul>
                 </td>
-                <td>Method</td>
+                <td>
+                    <ol>
+                        <% for(let m in recept.method) { %>
+                            <li> <%= recept.method[m] %> </li>
+                        <% } %>
+                    </ol>
+                </td>
             </tr>
         <% }) %>
     </table>
