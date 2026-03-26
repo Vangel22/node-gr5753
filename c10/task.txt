@@ -1,0 +1,2 @@
+1. Napisete ja nizata studenti da se prikaze na localhost:3000 
+// ime, prezime, prosek treba da pokazeme
