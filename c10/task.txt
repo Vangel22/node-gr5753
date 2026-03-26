@@ -1,2 +1,8 @@
+Task 1
 1. Napisete ja nizata studenti da se prikaze na localhost:3000 
 // ime, prezime, prosek treba da pokazeme
+
+
+
+Task 2
+1. Prikazete gi metodite na sekoj recept vo index.ejs fajlot so pomos na ciklus
